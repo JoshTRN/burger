@@ -1,15 +1,20 @@
 var connection = require('./connection.js');
 
-function SQL() {
-    this.selectAll = function() {
+orm = {
+    selectAll: function() {
+        connection.query("SELECT * FROM burgers", function(err) {
 
-    };
-    this.insertOne = function() {
+        })
+        console.log('you called select all');
 
-    };
-    this.updateOne = function () {
+    },
 
-    };
+    insertOne: function() {
+
+    },
+    updateOne: function () {
+
+    }
 }
-console.log('required');
-module.exports = SQL;
+
+module.exports = orm;
